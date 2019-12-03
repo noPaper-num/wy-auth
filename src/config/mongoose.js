@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URI, {
   useMongoClient: true,
   connectTimeoutMS: 24000,
   socketTimeoutMS: 24000,
